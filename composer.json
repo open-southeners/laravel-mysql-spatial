@@ -36,6 +36,7 @@
         "nunomaduro/larastan": "^2.6",
         "mockery/mockery": "^1.3"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Grimzy\\LaravelMysqlSpatial\\": "src/"
@@ -45,6 +46,9 @@
         "psr-4": {
             "Grimzy\\LaravelMysqlSpatial\\Tests\\": "tests"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "laravel": {

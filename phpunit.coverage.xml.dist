@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.1/phpunit.xsd" backupGlobals="false" bootstrap="vendor/autoload.php" colors="true" processIsolation="false" stopOnFailure="false" executionOrder="random" failOnWarning="true" failOnRisky="true" failOnEmptyTestSuite="true" beStrictAboutOutputDuringTests="true" cacheDirectory=".phpunit.cache" backupStaticProperties="false">
-  <testsuites>
-    <testsuite name="Test Suite">
-      <directory>tests</directory>
-    </testsuite>
-  </testsuites>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+  bootstrap="vendor/autoload.php"
+  backupGlobals="false"
+  colors="true"
+  processIsolation="true"
+  stopOnFailure="false"
+  cacheDirectory=".phpunit.cache"
+  backupStaticProperties="false"
+>
   <coverage>
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
     <report>
       <clover outputFile="clover.xml"/>
     </report>
   </coverage>
+  <testsuites>
+    <testsuite name="Package Test Suite">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
   <php>
     <env name="APP_ENV" value="testing"/>
     <env name="APP_DEBUG" value="true"/>
@@ -23,9 +35,4 @@
     <env name="DB_USERNAME" value="root"/>
     <env name="DB_PASSWORD" value="root"/>
   </php>
-  <source>
-    <include>
-      <directory suffix=".php">./src</directory>
-    </include>
-  </source>
 </phpunit>
