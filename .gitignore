@@ -1,5 +1,8 @@
-.idea/
-vendor/
+/vendor/
+/node_modules
 composer.lock
-_db/
-build/
+phpunit.xml
+.DS_Store
+coverage
+clover.xml
+.phpunit.cache

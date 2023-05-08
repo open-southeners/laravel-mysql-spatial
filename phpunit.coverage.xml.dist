@@ -5,6 +5,11 @@
       <directory>tests</directory>
     </testsuite>
   </testsuites>
+  <coverage>
+    <report>
+      <clover outputFile="clover.xml"/>
+    </report>
+  </coverage>
   <php>
     <env name="APP_ENV" value="testing"/>
     <env name="APP_DEBUG" value="true"/>
