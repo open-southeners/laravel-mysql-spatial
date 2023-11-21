@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [6.1.0] - 2023-11-21
+
+### Added
+
+- Compatibility with Livewire (using wireable interface & methods)
+
 ## [6.0.0] - 2023-05-09
 
 ### Added
