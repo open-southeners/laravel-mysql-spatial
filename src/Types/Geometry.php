@@ -7,8 +7,9 @@ use GeoJson\Feature\Feature;
 use GeoJson\GeoJson;
 use Grimzy\LaravelMysqlSpatial\Exceptions\UnknownWKTTypeException;
 use Illuminate\Contracts\Support\Jsonable;
+use Livewire\Wireable;
 
-abstract class Geometry implements GeometryInterface, Jsonable, \JsonSerializable
+abstract class Geometry implements GeometryInterface, Jsonable, \JsonSerializable, Wireable
 {
     protected static array$wkb_types = [
         1 => Point::class,
@@ -111,5 +112,18 @@ abstract class Geometry implements GeometryInterface, Jsonable, \JsonSerializabl
     public function toJson($options = 0)
     {
         return json_encode($this, $options);
+    }
+
+    public static function fromLivewire($value)
+    {
+        return static::fromJson($value);
+    }
+
+    public function toLivewire()
+    {
+        return [
+            'lat' => $this->getLat(),
+            'lng' => $this->getLng(),
+        ];
     }
 }
