@@ -7,6 +7,10 @@ Forked version of [grimzy/laravel-mysql-spatial](https://github.com/grimzy/larav
 
 **To check all documentation and usage use the original repository (will be maintained until somehow need to change in functionality).**
 
+## Notice
+
+**This repository is unmaintained as we migrate our projects to use: [matanyadaev/laravel-eloquent-spatial](https://github.com/MatanYadaev/laravel-eloquent-spatial)**
+
 ## Getting started
 
 The only procedure that changes is the package name under packagist, **you shall install this one** via the following command:

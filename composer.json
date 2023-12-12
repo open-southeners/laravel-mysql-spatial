@@ -2,6 +2,7 @@
     "name": "open-southeners/laravel-mysql-spatial",
     "description": "MySQL spatial data types extension for Laravel.",
     "license": "MIT",
+    "abandoned": "matanyadaev/laravel-eloquent-spatial",
     "authors": [
         {
             "name": "Joseph Estefane",
